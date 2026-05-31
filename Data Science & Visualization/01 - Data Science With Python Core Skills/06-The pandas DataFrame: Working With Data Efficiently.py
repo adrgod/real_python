@@ -656,6 +656,18 @@ def _(temp):
 
 
 @app.cell
+def _(df):
+    df
+    return
+
+
+@app.cell
+def _(df):
+    df['py-score'].plot.hist(bins=5, alpha=0.8)
+    return
+
+
+@app.cell
 def _():
     return
 
