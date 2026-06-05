@@ -179,6 +179,20 @@ def _(fruits, pd, veggies):
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    so what happened when no using on= is : pandas try to match all columns with same name, here in our example with columns 'name' and 'image':
+    """)
+    return
+
+
+@app.cell
+def _(fruits, pd, veggies):
+    pd.merge(fruits, veggies, on=['name', 'image'])
+    return
+
+
 @app.cell
 def _():
     return
